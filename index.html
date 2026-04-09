@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIMOD ARQUITECTURA | Contacto</title>
+  <link rel="icon" href="Logo_Coworking solo letras.png" type="image/jpeg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      /* Palette from user */
+      --color-charcoal: #1E1E1E;
+      --color-gray: #393939;
+      --color-navy: #222A37;
+      --color-blue: #052D61;
+      
+      --bg-gradient: linear-gradient(160deg, var(--color-charcoal) 0%, var(--color-navy) 45%, var(--color-blue) 100%);
+      --card-bg: rgba(57, 57, 57, 0.25);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text-main: #ffffff;
+      --text-dim: rgba(255, 255, 255, 0.7);
+      --font-family: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      text-align: center;
+      margin-bottom: 45px;
+      width: 100%;
+    }
+
+    .logo-container {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .logo-img {
+      width: 100%;
+      height: auto;
+      max-height: 140px;
+      object-fit: contain;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Social Icons */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .social-icon {
+      color: white;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icon:hover {
+      background: var(--color-blue);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px) rotate(8deg);
+      box-shadow: 0 5px 15px rgba(5, 45, 97, 0.4);
+    }
+
+    /* Buttons List */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .link-card {
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+      transition: 0.5s;
+    }
+
+    .link-card:hover::before {
+      left: 100%;
+    }
+
+    .link-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.02);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .link-content {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .more-icon {
+      position: absolute;
+      right: 20px;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+
+    .link-card:hover .more-icon {
+      opacity: 1;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding: 20px 0;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      text-align: center;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 480px) {
+      .link-content {
+        font-size: 1rem;
+      }
+      .logo-container {
+        max-width: 260px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+
+    <section class="profile-section">
+      <div class="logo-container">
+        <img src="Logo_Coworking solo letras.png" alt="COWORKING BY VIMOD Logo" class="logo-img">
+      </div>
+      
+      <p class="subtitle">Información y contacto aquí! 👇</p>
+      
+    </section>
+
+    <nav class="links-list">
+      <a href="https://www.coworkingbyvimod.com/" class="link-card" target="_blank">
+        <div class="link-content">Nuestra Página</div>
+        <i data-lucide="more-vertical" class="more-icon" size="18"></i>
+      </a>
+      
+      <a href="https://wa.me/+51943304742" class="link-card" target="_blank">
+        <div class="link-content">WhatsApp</div>
+        <i data-lucide="more-vertical" class="more-icon" size="18"></i>
+      </a>
+
+      <a href="https://www.instagram.com/coworkingvimod/" class="link-card" target="_blank">
+        <div class="link-content">Instagram</div>
+        <i data-lucide="more-vertical" class="more-icon" size="18"></i>
+      </a>
+
+      <a href="https://maps.app.goo.gl/aQqDQTE445PZDNFD6" class="link-card" target="_blank">
+        <div class="link-content">Ubicación</div>
+        <i data-lucide="more-vertical" class="more-icon" size="18"></i>
+      </a>
+    </nav>
+
+    <footer class="footer">
+      &copy; 2026 COWORKING BY VIMOD. Todos los derechos reservados.
+    </footer>
+  </div>
+
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
+
